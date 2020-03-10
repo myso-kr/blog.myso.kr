@@ -17,9 +17,6 @@
     <meta name="twitter:description" content="어플리케이션 기획/개발 프리랜서 360도 VR 미디어 크리에이터">
     <meta property="profile:first_name" content="Won">
     <meta property="profile:last_name" content="Choi">
-    <script>
-      var redirection_url = "{{ site.redirection_url }}" + location.pathname + "?proxyReferer=" + document.referrer + location.search.replace(/^\?/, '&');
-      window.location.replace(redirection_url);
-    </script>
+    <script>window.location.replace("{{ site.redirection_url }}" + location.pathname.replace(/\/$/, '') + "?proxyReferer=" + document.referrer + location.search.replace(/^\?/, '&'));</script>
   </head>
 </html>
